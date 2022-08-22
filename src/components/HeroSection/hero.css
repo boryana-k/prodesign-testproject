@@ -1,0 +1,295 @@
+.hero {
+    width: 100%;
+    position: relative;
+}
+
+.bg-img {
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 0px 60px;
+        color: white;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-family: var(--font-minerva);
+        font-size: 24px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        margin-bottom: 10px;
+    }
+
+    .text-content p {
+        font-family: var(--font-poppins);
+        font-size: 16px;
+        font-weight: 100;
+        color: var(--text-color);
+    }
+
+    .hero-btn {
+        position: relative;
+        cursor: pointer;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        width: 80%;
+        border: 1px solid var(--text-color);
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .hero-btn span {
+        position: relative;
+        font-family: var(--font-poppins);
+        font-weight: 100;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .pagination-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        
+    }
+    .pagination-2 .dot {
+        width: 10px;
+        height: 10px;
+        border: 1px solid var(--text-color);
+        border-radius: 50%;
+    }
+    .pagination-2 > :first-child{
+        background-color: var(--text-color);
+    }
+    .hero-btn img {
+        display: none;
+    }
+
+    .widget {
+        display: none;
+    }
+
+    .pagination {
+        display: none;
+    }
+}
+
+
+
+/* DESKTOP  */
+@media only screen and (min-width: 768px) {
+    .bg-layer {
+        background-color: rgba(255, 255, 255, 0);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .text-content {
+        width: 600PX;
+        color: white;
+    }
+
+    .text-content h1 {
+        font-family: var(--font-minerva);
+        font-size: 48px;
+        text-transform: uppercase;
+    }
+
+    .text-content p {
+        font-family: var(--font-poppins);
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    /* READ MORE BTN */
+    .hero-btn {
+        position: relative;
+        cursor: pointer;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 30px;
+        border: 1px solid var(--secondary-color);
+    }
+
+    .hero-btn span {
+        position: relative;
+        font-family: var(--font-poppins);
+        font-weight: 100;
+        font-size: 14px;
+        color: var(--secondary-color);
+    }
+
+    .hero-btn img {
+        position: absolute;
+        right: -18px;
+        bottom: 16px;
+        width: 35px;
+        transition: right 0.2s;
+    }
+
+    .hero-btn::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: var(--secondary-color);
+        transition: right 0.2s;
+    }
+
+    .hero-btn:hover::after {
+        right: 0;
+    }
+
+    .hero-btn:hover> :last-child {
+        right: -25px;
+    }
+
+    .hero-btn:hover> :first-child {
+        color: var(--main-color);
+        z-index: 1;
+    }
+
+    /* WIDGET */
+    .widget {
+        cursor: pointer;
+        position: absolute;
+        bottom: 200px;
+        right: 0;
+        display: flex;
+    }
+
+    /* WIDGET BTN */
+    .events-btn {
+        cursor: pointer;
+        width: 70px;
+        height: 160px;
+        background-color: var(--secondary-color);
+        text-transform: uppercase;
+        border: none;
+    }
+
+    .events-btn span {
+        width: 70px;
+        height: 160px;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        font-family: var(--font-poppins);
+        font-size: 20px;
+        font-weight: 100;
+        color: var(--main-color);
+    }
+
+    /* EVENT CARD */
+    .event-card {
+        width: 300px;
+        height: 220px;
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-family: 'PT Sans';
+    }
+
+    .up {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .event-date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+
+    .mid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    /* PAGINATION */
+    .pagination {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        bottom: 40px;
+        gap: 10px;
+        border-bottom: 2px solid #c3c3c3;
+    }
+
+    .pagination .tab {
+        text-align: start;
+        width: 350px;
+    }
+
+    .pagination .tab h1 {
+        color: var(--secondary-color);
+        font-family: var(--font-poppins);
+        font-style: bold;
+        font-size: 14px;
+    }
+
+    .pagination .tab p {
+        font-family: var(--font-poppins);
+        font-weight: 100;
+        font-size: 20px;
+    }
+
+    .pagination> :first-child p {
+        border-bottom: var(--secondary-color) solid 1px;
+    }
+
+    .pagination-2 {
+        display: none;
+    }
+}
+
+

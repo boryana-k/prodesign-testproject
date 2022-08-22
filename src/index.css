@@ -1,0 +1,40 @@
+@import url("https://use.typekit.net/hsc4okz.css");
+
+/* 
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Minerva-Modern',sans-serif;
+*/
+
+:root {
+    --main-color: #fff;
+    --secondary-color: #C89C59;
+    --text-color: #02293E;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-minerva: 'Minerva-Modern',sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f0ea;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
