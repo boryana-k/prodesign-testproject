@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import line from '../../assets/line1.png'
 import Footer from '../Footer/Footer'
 import './subscribe.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Subscribe() {
+    useEffect(() => {
+        Aos.init({duration: 1000})
+      }, [])
     return (
         <div className='subscribe'>
             <div className='separator'></div>
 
-            <div className="subscribe-container">
+            <div className="subscribe-container" data-aos="fade-up">
                 <h1>Stay up to date</h1>
                 <p>To receive our monthly newsletter please add your email address below</p>
 

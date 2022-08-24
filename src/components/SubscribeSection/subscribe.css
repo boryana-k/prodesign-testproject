@@ -94,6 +94,7 @@
         background: url(../../assets/subs-bg.png), linear-gradient(180deg, rgba(241, 240, 234, 1) 0%, rgba(255, 255, 255, 0) 40%) no-repeat center;
         background-blend-mode: overlay;
         background-size: cover;
+        height: 1000px;
 
     }
 

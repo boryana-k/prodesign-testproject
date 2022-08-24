@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoSearchSharp } from 'react-icons/io5'
 import { BsChevronCompactDown } from 'react-icons/bs'
 import Navbar from '../Navbar/Navbar'
@@ -8,14 +8,22 @@ import bgimg from '../../assets/video.png'
 import './hero.css'
 
 import { useState } from 'react';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Hero() {
+
+    useEffect(() => {
+        Aos.init({duration: 1000})
+      }, [])
 
     const [isShown, setIsShown] = useState(false);
 
     const handleClick = event => {
         setIsShown(current => !current);
     };
+
+    
 
     return (
         <div className='hero'>
@@ -59,7 +67,7 @@ function Hero() {
 
                 </div>
 
-                <div className='pagination'>
+                <div className='pagination' data-aos="fade-up">
                     <div className='tab'>
                         <h1>01.</h1>
                         <p>Who we are</p>

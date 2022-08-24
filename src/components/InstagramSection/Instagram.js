@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './instagram.css'
 import img1 from '../../assets/img1.png'
 import img2 from '../../assets/img2.png'
@@ -8,6 +8,9 @@ import img5 from '../../assets/img5.png'
 import img6 from '../../assets/img6.png'
 import img7 from '../../assets/img7.png'
 import img8 from '../../assets/img8.png'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const photos = [
   {
@@ -41,9 +44,12 @@ const photos = [
 
 ]
 function Instagram() {
+  useEffect(() => {
+    Aos.init({duration: 1000})
+  }, [])
   return (
     <div className='instagram'>
-      <div className="instagram-watermark">
+      <div className="instagram-watermark" data-aos="fade-up">
         <h1>Instagram</h1>
         <p>Share your experience</p>
       </div>

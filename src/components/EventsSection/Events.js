@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import EventCard from './../eventcard/EventCard'
 import event1 from '../../assets/event1.png'
 import event2 from '../../assets/event2.png'
@@ -7,6 +7,9 @@ import line from '../../assets/line.png'
 import './events.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const events = [
     {
@@ -32,15 +35,18 @@ const events = [
 ]
 
 function Events() {
+    useEffect(() => {
+        Aos.init({duration: 1000})
+      }, [])
     return (
         <div className='events'>
             <div className='events-container'>
-                <div className='events-watermark'>
+                <div className='events-watermark' data-aos="fade-up">
                     <h1>EVENTS</h1>
                     <p>Upcoming Events</p>
                 </div>
 
-                <div className="cards-container">
+                <div className="cards-container" data-aos="fade-up">
                     {events.map(({ image, title, type, place, time }) => {
                         return (
                             <EventCard image={image} title={title} type={type} place={place} time={time} />
@@ -69,7 +75,7 @@ function Events() {
             </div>
 
             <div className="btn-container">
-                <div className='hero-btn'>
+                <div className='hero-btn'data-aos="fade-up">
                     <span>more events</span>
                     <img src={line} alt="" />
                 </div>
