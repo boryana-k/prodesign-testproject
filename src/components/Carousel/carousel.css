@@ -55,11 +55,8 @@
     }
 }
 
-
-
 /* DESKTOP  */
 @media only screen and (min-width: 768px) {
-
     .carousel {
         width: 70%;
         margin: 0;
@@ -70,7 +67,7 @@
     }
 
     .swiper-wrapper {
-        width: 1200px;
+        width: 1000px;
     }
 
     .swiper-horizontal>.swiper-pagination-progressbar,
@@ -120,5 +117,13 @@
 
     .carousel-btn:hover> :last-child {
         right: 50px;
+    }
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .carousel {
+        width: 50%;
+        right: 100px;
     }
 }

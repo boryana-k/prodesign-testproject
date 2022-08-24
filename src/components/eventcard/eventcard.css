@@ -71,3 +71,24 @@
         font-weight: 100;
     }
 }
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .events-card {
+        width: 400px;
+    }
+    
+    .event-details {
+        height: 250px;
+    }
+    .event-details h1 {
+        font-size: 24px;
+    }
+
+    .event-details h2 {
+        font-size: 18px;
+    }
+    .event-details p {
+        font-size: 14px;
+    }
+}

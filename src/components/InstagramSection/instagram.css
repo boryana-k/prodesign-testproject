@@ -87,3 +87,10 @@
         height: 250px;
     }
 }
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .instagram-watermark p {
+        font-size: 45px;
+    }
+}

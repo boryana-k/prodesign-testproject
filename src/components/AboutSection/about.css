@@ -5,13 +5,8 @@
     }
 }
 
-
-
-
 /* DESKTOP  */
 @media only screen and (min-width: 768px) {
-
-    
     .about {
         margin-top: 150px;
         padding: 50px 30px 50px 0px;
@@ -19,11 +14,9 @@
         display: flex;
         position: relative;
         color: var(--text-color);
-
         cursor: default;
     }
 
-    
     .title-container {
         width: 50%;
         text-transform: uppercase;
@@ -51,12 +44,14 @@
     }
 
     .about-container h1 {
+        width: 90%;
         font-size: 30px;
         text-transform: uppercase;
         font-weight: 100;
     }
 
     .about-container p {
+        width: 90%;
         font-size: 16px;
     }
 
@@ -112,3 +107,9 @@
     }
 }
 
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .title-container span {
+        font-size: 72px;
+    }
+}

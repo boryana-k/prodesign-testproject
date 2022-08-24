@@ -100,3 +100,9 @@
     }
 }
 
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .links ul a {
+        font-size: 16px;
+    }
+}

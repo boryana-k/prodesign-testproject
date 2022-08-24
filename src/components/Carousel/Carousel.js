@@ -47,7 +47,7 @@ function Carousel() {
     <div className='carousel-wrapper'>
       <Swiper
         slidesPerView={2}
-        spaceBetween={-150}
+        spaceBetween={0}
         pagination={{
           type: "progressbar",
         }}

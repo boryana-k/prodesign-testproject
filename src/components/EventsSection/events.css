@@ -89,7 +89,8 @@
     .btn-container {
         display: flex;
         width: 85%;
-        height: 100px;
+        height: auto;
+        padding: 50px;
         background-color: var(--text-color);
         justify-content: center;
         text-transform: uppercase;
@@ -97,5 +98,12 @@
 
     .swiper-cards {
         display: none;
+    }
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1025px) {
+    .events-watermark p {
+        font-size: 45px;
     }
 }
