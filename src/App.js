@@ -1,13 +1,19 @@
-import About from './components/AboutSection/About';
-import Casino from './components/CasinoSection/Casino';
-import CTA from './components/CTA/CTA';
-import Events from './components/EventsSection/Events';
-import Hero from './components/HeroSection/Hero';
-import Instagram from './components/InstagramSection/Instagram';
-import Services from './components/ServicesSection/Services';
-import Subscribe from './components/SubscribeSection/Subscribe';
+import About from './components/About';
+import Casino from './components/Casino';
+import CTA from './components/CTA';
+import Events from './components/Events';
+import Hero from './components//Hero';
+import Instagram from './components/Instagram';
+import Services from './components/Services';
+import Subscribe from './components/Subscribe';
+import { useEffect } from 'react';
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 function App() {
+  useEffect(() => {
+    Aos.init({duration: 1000})
+  }, [])
   return (
     <div className="App">
       <Hero />
